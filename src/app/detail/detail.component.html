@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-6">
+        <img style="width: 100%" src="assets\img\doctor-1659516-1410038.png" />
+    </div>
+    <div class="col-6" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-12" style="text-align: -webkit-center;">
+                <span style="font-size: x-large;">{{ detail.rec }}</span>
+                <br>
+                <span>Recommendation</span>
+                <br>
+                <span>Schedule On</span>
+                <br>
+                <span>Weekdays, 10AM-18PM</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: xx-large;
+                    font-weight: 500;">{{ detail.name }}</span>
+            </div>
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: x-large;">{{ city }}</span>
+            </div>
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: x-large;">{{ detail.city }}</span>
+            </div>
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: x-large;">{{ detail.mastery }}</span>
+            </div>
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: x-large;">IDR&nbsp;{{ detail.price |
+                    number }}</span>
+            </div>
+            <div class="col-12" style="padding-top: 10px;">
+                <span style="font-size: x-large;">{{ detail.exp }}&nbsp;Years
+                    experience</span>
+            </div>
+            <div class="col-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit tellus metus, ut euismod nisl venenatis vel. Praesent dictum est non eleifend lobortis. Nunc nec egestas eros, a rhoncus nunc. Donec arcu risus, vestibulum non porta
+                    non, rutrum vel ipsum. In eu orci lacinia nulla consequat posuere id tempus neque.</p>
+            </div>
+            <!-- <agm-map [latitude]="lat" [longitude]="lng"></agm-map> -->
+            <!-- <google-map [options]="mapOptions">
+            </google-map>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async></script> -->
+            <div class="col-12">
+                <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+            </div>
+        </div>
+    </div>
+</div>

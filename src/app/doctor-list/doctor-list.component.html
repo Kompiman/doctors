@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-12">
+        <ul class="dataUser">
+            <li *ngFor="let data of doctors | paginate: { itemsPerPage:
+                pageSize,
+                currentPage: p }">
+                <mat-card class="shadow-card hovering" (click)=goDetail(data)>
+                    <mat-card-header style="border-radius: 10px;">
+                        <mat-card-title style="font-size: medium;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img style="width: 100%" src="assets\img\doctor-1659516-1410038.png" />
+                                </div>
+                                <div class="col-6" style="place-self: center;">
+                                    <span>{{ data.name}}</span>
+                                </div>
+                            </div>
+                        </mat-card-title>
+                        <a href=""></a>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-12">
+                                {{ city }}
+                            </div>
+                            <div class="col-12">
+                                {{ data.mastery }}
+                            </div>
+                            <div class="col-12">
+                                Rp&nbsp;{{ data.price | number}}
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
+    <div class="col-12">
+        <mat-form-field style="width: 20%; float: right;  margin-right: 6px;
+        padding-right: 6px;">
+            <mat-label>Size</mat-label>
+            <select matNativeControl [(ngModel)]=pageSize>
+                <option value='5'>5</option>
+                <option value='10'>10</option>
+            </select>
+        </mat-form-field>
+    </div>
+    <div class="col-12">
+        <pagination-controls (pageChange)="p= $event" style="float: right;"></pagination-controls>
+    </div>
+</div>

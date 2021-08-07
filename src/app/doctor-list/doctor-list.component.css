@@ -1,0 +1,28 @@
+.dataUser {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    /* width: 15em; */
+    /* padding-top: 10px; */
+    /* padding-left: 25px; */
+}
+
+.mat-card {
+    margin: 16px;
+    padding: 16px;
+}
+
+.hovering:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+
+/* .hovering:active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.53), 0 4px 8px rgba(0, 0, 0, 0.34);
+} */
+
+.labelHovering:hover {
+    cursor: pointer;
+}
